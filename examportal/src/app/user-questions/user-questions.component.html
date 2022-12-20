@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="text-center">
+  <h1>Solve Questions</h1>
+ 
+  
+  <div *ngFor="let data of questionsList">
+    <b>{{data.questionId}}</b><br>
+    <h3><b>{{data.question}}</b></h3><br>  
+   <div class="control">
+    <label class="radio">
+      <input type="radio" name="answer">
+      {{data.option1}}
+    </label><br>
+    <label class="radio">
+      <input type="radio" name="answer">
+      {{data.option2}}
+    </label><br>
+    <label class="radio">
+      <input type="radio" name="answer">
+      {{data.option3}}
+    </label><br>
+    <label class="radio">
+      <input type="radio" name="answer">
+      {{data.option4}}
+    </label><br>
+    <button type="submit" value="submit">submit</button>
+  </div>
+  </div>
+  
+</div>
+</div>
+<!--   
+   <div class="control">
+    <label class="radio">
+      <input type="radio" name="answer">
+      {{data.option1}}
+    </label><br>
+    <label class="radio">
+      <input type="radio" name="answer">
+      {{data.option2}}
+    </label><br>
+    <label class="radio">
+      <input type="radio" name="answer">
+      {{data.option3}}
+    </label><br>
+    <label class="radio">
+      <input type="radio" name="answer">
+      {{data.option4}}
+    </label><br>
+    <button type="submit" value="submit">submit</button>
+  </div>
+  </div>-->

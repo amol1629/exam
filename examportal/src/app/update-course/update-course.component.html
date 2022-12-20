@@ -1,0 +1,75 @@
+<h1 class="text-center">update-Course </h1>
+
+ <div class="container">
+    <div class="bootstrap-wrapper">
+        <div class="row" >
+            <div class="col-md-6 offset-3">
+                <form [formGroup]="updateCourseForm" (ngSubmit)="updateCourse()">
+                    <div class="form-group">
+                        <label for="courseName">Course Name</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="courseName"
+                       name="courseName" 
+                       formControlName="courseName"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="updateCourseForm.controls['courseName'].touched && !updateCourseForm.controls['courseName'].valid">
+                        
+                        <span *ngIf="updateCourseForm.controls['courseName'].hasError('required')">
+                            Course name is required !
+                        </span>
+                        <span *ngIf="updateCourseForm.controls['courseName'].hasError('minlength')">
+                            Course name Should be minimum 4 characters !
+                        </span>
+                        <span *ngIf="updateCourseForm.controls['courseName'].hasError('maxlength')">
+                            Course name Should be maximum 10 characters !
+                        </span>
+                       
+                       </span>
+                     </div>
+                     <div class="form-group">
+                        <label for="courseFee">Course Fee</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="courseFee"
+                       name="courseFee" 
+                       formControlName="courseFee"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="updateCourseForm.controls['courseFee'].touched && !updateCourseForm.controls['courseFee'].valid">
+                        
+                        <span *ngIf="updateCourseForm.controls['courseFee'].hasError('required')">
+                            Course Fee is required !
+                        </span>
+                        <span *ngIf="updateCourseForm.controls['courseFee'].hasError('min')">
+                            Course Fee Should be minimum 1000 RS!
+                        </span>
+                        <span *ngIf="updateCourseForm.controls['courseFee'].hasError('max')">
+                            Course Fee Should be maximum 2000 RS!
+                        </span>
+                       
+                       </span>
+
+                     </div>
+                     
+
+                     
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                   
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="btn btn-success">Update</button>
+                    
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                    </div>  
+                </form>
+            
+               
+        </div>
+
+    </div>
+
+    
+
+ </div>

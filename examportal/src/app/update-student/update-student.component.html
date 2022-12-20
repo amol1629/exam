@@ -1,0 +1,157 @@
+<h1 class="text-center">update-Student </h1>
+
+ <div class="container">
+    <div class="bootstrap-wrapper">
+        <div class="row" >
+            <div class="col-md-6 offset-3">
+                <form [formGroup]="updateStudentForm" (ngSubmit)="updateStudent()">
+                    <div class="form-group">
+                        <label for="studentName">Student Name</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="studentName"
+                       name="studentName" 
+                       formControlName="studentName"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="updateStudentForm.controls['studentName'].touched && !updateStudentForm.controls['studentName'].valid">
+                        
+                        <span *ngIf="updateStudentForm.controls['studentName'].hasError('required')">
+                            student name is required !
+                        </span>
+                        <span *ngIf="updateStudentForm.controls['studentName'].hasError('minlength')">
+                            student name Should be minimum 4 characters !
+                        </span>
+                        <span *ngIf="updateStudentForm.controls['studentName'].hasError('maxlength')">
+                            student name Should be maximum 10 characters !
+                        </span>
+                       
+                       </span>
+                     </div>
+                     <div class="form-group">
+                        <label for="studentQualification">Qualification</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="studentQualification"
+                       name="studentQualification" 
+                       formControlName="studentQualification"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="updateStudentForm.controls['studentQualification'].touched && !updateStudentForm.controls['studentQualification'].valid">
+                        
+                        <span *ngIf="updateStudentForm.controls['studentQualification'].hasError('required')">
+                            studentQualification is required !
+                        </span>
+                        <span *ngIf="updateStudentForm.controls['studentQualification'].hasError('minlength')">
+                            studentQualification Should be minimum 2 characters !
+                        </span>
+                        <span *ngIf="updateStudentForm.controls['studentQualification'].hasError('maxlength')">
+                            studentQualification Should be maximum 10 characters !
+                        </span>
+                       
+                       </span>
+                     
+                     </div>
+                     <div class="form-group">
+                        <label for="studentAge">Student Age</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="studentAge"
+                       name="studentAge" 
+                       formControlName="studentAge"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="updateStudentForm.controls['studentAge'].touched && !updateStudentForm.controls['studentAge'].valid">
+                        
+                        <span *ngIf="updateStudentForm.controls['studentAge'].hasError('required')">
+                            student Age is required !
+                        </span>
+                        <span *ngIf="updateStudentForm.controls['studentAge'].hasError('min')">
+                            student Age Should be minimum 10 years !
+                        </span>
+                       
+                       </span>
+
+                     </div>
+                     <div class="form-group">
+                        <label for="studentEmail">Student Email</label>
+                      <input type="email"
+                       class="form-control" 
+                       id="studentEmail"
+                       name="studentEmail" 
+                       formControlName="studentEmail"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="updateStudentForm.controls['studentEmail'].touched && !updateStudentForm.controls['studentEmail'].valid">
+                        
+                        <span *ngIf="updateStudentForm.controls['studentEmail'].hasError('required')">
+                            student Email is required !
+                        </span>
+                        <span *ngIf="updateStudentForm.controls['studentEmail'].hasError('min')">
+                            please enter valid email Id !
+                        </span>
+                       </span> 
+                     </div>
+                     
+                     <div class="form-group">
+                        <label for="studentPassword">Student Password</label>
+                      <input type="password"
+                       class="form-control" 
+                       id="studentPassword"
+                       name="studentPassword" 
+                       formControlName="studentPassword"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="updateStudentForm.controls['studentPassword'].touched && !updateStudentForm.controls['studentPassword'].valid">
+                        
+                        <span *ngIf="updateStudentForm.controls['studentPassword'].hasError('required')">
+                            student Password is required !
+                        </span>
+                        <span *ngIf="updateStudentForm.controls['studentPassword'].hasError('minlength')">
+                              Password Should be min 5 characters!
+                        </span>
+                        <span *ngIf="updateStudentForm.controls['studentPassword'].hasError('maxlength')">
+                          Password Should be max 10 characters!
+                    </span>
+                
+                       </span>
+                    </div>
+                    <div class="form-group">
+                       <label for="studentMobileNumber">Mobile Number</label>
+                     <input type="text"
+                      class="form-control" 
+                      id="studentMobileNumber"
+                      name="studentMobileNumber" 
+                      formControlName="studentMobileNumber"
+                      aria-describedby="emailHelp">
+                      <span *ngIf="updateStudentForm.controls['studentMobileNumber'].touched && !updateStudentForm.controls['studentMobileNumber'].valid">
+                       
+                       <span *ngIf="updateStudentForm.controls['studentMobileNumber'].hasError('required')">
+                           Mobile Number is required !
+                       </span>
+                       <span *ngIf="updateStudentForm.controls['studentMobileNumber'].hasError('min')">
+                           Mobile Number Should be minimum 10 Number !
+                       </span>
+                       <span *ngIf="updateStudentForm.controls['studentMobileNumber'].hasError('maximum')">
+                        Mobile Number Should be maximum 10 Number !
+                    </span>
+                      </span>
+
+                    </div>
+
+                     
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                   
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="btn btn-success">Update</button>
+                    
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                    </div>  
+                </form>
+            
+               
+        </div>
+
+    </div>
+
+    
+
+ </div>

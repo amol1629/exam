@@ -1,0 +1,30 @@
+<h1 class="text-center">exam-result-report works!</h1>
+
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">no_of_Questions</th>
+            <th scope="col">attemptedQuestions</th>
+            <th scope="col">total_Marks</th>
+            <th scope="col">Your Marks</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of examReportList">
+            <th>{{data.examResultId}}</th>
+           <td>{{data.no_of_Questions}}</td>
+            <td>{{data.attemptedQuestions}}</td>
+            <td>{{data.total_Marks}}</td>
+            <td>{{data.get_Marks}}</td>
+            
+            
+
+            <td><a routerLink=""><i style="color:green" class="fa fa-pencil" aria-hidden="true" ></i></a> | <i style="color:red" (click)="deleteExamResultReport(data.examResultId)" class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+        
+        </tbody>
+    </table>
+</div>

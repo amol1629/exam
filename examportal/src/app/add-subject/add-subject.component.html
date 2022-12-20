@@ -1,0 +1,71 @@
+<h1 class="text-center">add-subject </h1>
+ <div class="container">
+    <div class="bootstrap-wrapper">
+        <div class="row" >
+            <div class="col-md-6 offset-3">
+                <form [formGroup]="subjectReg" (ngSubmit)="register()">
+                    <div class="form-group">
+                        <label for="subjectName">subject Name</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="subjectName"
+                       name="subjectName" 
+                       formControlName="subjectName"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="subjectReg.controls['subjectName'].touched && !subjectReg.controls['subjectName'].valid">
+                        
+                        <span *ngIf="subjectReg.controls['subjectName'].hasError('required')">
+                            subject name is required !
+                        </span>
+                        <span *ngIf="subjectReg.controls['subjectName'].hasError('minlength')">
+                            subject name Should be minimum 4 characters !
+                        </span>
+                        <span *ngIf="subjectReg.controls['subjectName'].hasError('maxlength')">
+                            subject name Should be maximum 10 characters !
+                        </span>
+                       
+                       </span>
+                     </div>
+                     <div class="form-group">
+                        <label for="subjectDiscription">discription</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="subjectDiscription"
+                       name="subjectDiscription" 
+                       formControlName="subjectDiscription"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="subjectReg.controls['subjectDiscription'].touched && !subjectReg.controls['subjectDiscription'].valid">
+                        
+                        <span *ngIf="subjectReg.controls['subjectDiscription'].hasError('required')">
+                            discription is required !
+                        </span>
+                        <span *ngIf="subjectReg.controls['subjectDiscription'].hasError('minlength')">
+                            discription Should be minimum 2 characters !
+                        </span>
+                        <span *ngIf="subjectReg.controls['subjectDiscription'].hasError('maxlength')">
+                            discription Should be maximum 20 characters !
+                        </span>
+                        </span>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                             
+                          </div>
+                          <div class="text-center">
+                          <button type="submit" class="btn btn-success">Add</button>
+                          
+                          <button type="submit" class="btn btn-primary">Reset</button>
+                          </div>  
+                      </form>
+                  
+      
+              </div>
+      
+          </div>
+      
+          
+      
+       </div>
+      
+                      

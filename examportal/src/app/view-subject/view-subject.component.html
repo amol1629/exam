@@ -1,0 +1,26 @@
+<h1 class="text-center">subject List</h1>
+
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Discription</th>
+             <th scope="col">Action</th>
+             <th scope="col">add-Questions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of subjectList">
+            <th>{{data.subjectId}}</th>
+            <td>{{data.subjectName}}</td>
+            <td>{{data.subjectDiscription}}</td>
+           <td><a routerLink="/admin-dashboard/update-subject/{{data.subjectId}}"><i style="color:green" class="fa fa-pencil" aria-hidden="true" ></i></a> | <i style="color:red" (click)="deleteSubject(data.subjectId)" class="fa fa-trash" aria-hidden="true"></i></td>
+            <!-- <td><a routerLink="/admin-dashboard/add-questions/{{data.questionId}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></td>
+         -->
+          </tr>
+         
+        </tbody>
+    </table>
+</div>

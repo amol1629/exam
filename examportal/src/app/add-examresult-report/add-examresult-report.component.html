@@ -1,0 +1,94 @@
+<h1 class="text-center">add-ExamResultReport</h1>
+ <div class="container">
+    <div class="bootstrap-wrapper">
+        <div class="row" >
+            <div class="col-md-6 offset-3">
+                <form [formGroup]="examResultReportReg" (ngSubmit)="register()">
+                    <div class="form-group">
+                        <label for="no_of_Questions">no_of_Questions</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="no_of_Questions"
+                       name="no_of_Questions" 
+                       formControlName="no_of_Questions"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="examResultReportReg.controls['no_of_Questions'].touched && !examResultReportReg.controls['no_of_Questions'].valid">
+                        
+                        <span *ngIf="examResultReportReg.controls['no_of_Questions'].hasError('required')">
+                            examResultReportReg name is required !
+                        </span>
+                       
+                       </span>
+                     </div>
+                     <div class="form-group">
+                        <label for="total_Marks">total_Marks</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="total_Marks"
+                       name="total_Marks" 
+                       formControlName="total_Marks"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="examResultReportReg.controls['total_Marks'].touched && !examResultReportReg.controls['total_Marks'].valid">
+                        
+                        <span *ngIf="examResultReportReg.controls['total_Marks'].hasError('required')">
+                            total_Marks is required !
+                        </span>
+                       
+                       </span>
+                     
+                     </div>
+                    
+                     <div class="form-group">
+                        <label for="attemptedQuestions">attemptedQuestions</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="attemptedQuestions"
+                       name="attemptedQuestions" 
+                       formControlName="attemptedQuestions"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="examResultReportReg.controls['attemptedQuestions'].touched && !examResultReportReg.controls['attemptedQuestions'].valid">
+                        
+                        <span *ngIf="examResultReportReg.controls['attemptedQuestions'].hasError('required')">
+                            attemptedQuestions is required !
+                        </span>
+                        
+                       </span>
+
+                     </div>
+                     <div class="form-group">
+                        <label for="get_Marks">your_Marks</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="get_Marks"
+                       name="get_Marks" 
+                       formControlName="get_Marks"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="examResultReportReg.controls['get_Marks'].touched && !examResultReportReg.controls['get_Marks'].valid">
+                        
+                        <span *ngIf="examResultReportReg.controls['get_Marks'].hasError('required')">
+                            get_Marks is required !
+                        </span>
+                        
+                       </span> 
+                     </div>
+                     
+                                        <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                       
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="btn btn-success">Add</button>
+                    
+                    <button type="submit" class="btn btn-primary">Reset</button>
+                    </div>  
+                 
+                 
+            </form>
+        </div>
+
+    </div>
+
+    </div>
+
+ </div>

@@ -1,0 +1,126 @@
+<h1 class="text-center">add-question </h1>
+ <div class="container">
+    <div class="bootstrap-wrapper">
+        <div class="row" >
+            <div class="col-md-6 offset-3">
+                <form [formGroup]="questionReg" (ngSubmit)="register()">
+                    
+                    <div class="form-group">
+                        <label for="question">Question</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="question"
+                       name="question" 
+                       formControlName="question"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="questionReg.controls['question'].touched && !questionReg.controls['question'].valid">
+                        
+                        <span *ngIf="questionReg.controls['question'].hasError('required')">
+                            question  is required !
+                        </span>
+                       
+                       </span>
+                     </div>
+                    <div class="form-group">
+                        <label for="option1">Option1</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="option1"
+                       name="option1" 
+                       formControlName="option1"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="questionReg.controls['option1'].touched && !questionReg.controls['option1'].valid">
+                        
+                        <span *ngIf="questionReg.controls['option1'].hasError('required')">
+                            Option1  is required !
+                        </span>
+                       
+                       </span>
+                     </div>
+                      
+                     <div class="form-group">
+                        <label for="option2">Option2</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="option2"
+                       name="option2" 
+                       formControlName="option2"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="questionReg.controls['option2'].touched && !questionReg.controls['option2'].valid">
+                        
+                        <span *ngIf="questionReg.controls['option2'].hasError('required')">
+                            Option2  is required !
+                        </span>
+                       
+                       </span>
+                     </div>
+                     <div class="form-group">
+                        <label for="option1">Option3</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="option3"
+                       name="option3" 
+                       formControlName="option3"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="questionReg.controls['option3'].touched && !questionReg.controls['option3'].valid">
+                        
+                        <span *ngIf="questionReg.controls['option3'].hasError('required')">
+                            Option3  is required !
+                        </span>
+                       
+                       </span>
+                     </div>
+   
+                     <div class="form-group">
+                        <label for="option4">Option4</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="option4"
+                       name="option4" 
+                       formControlName="option4"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="questionReg.controls['option4'].touched && !questionReg.controls['option4'].valid">
+                        
+                        <span *ngIf="questionReg.controls['option4'].hasError('required')">
+                            Option4  is required !
+                        </span>
+                       
+                       </span>
+                     </div>
+                     <div class="form-group">
+                        <label for="answer">Answer</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="answer"
+                       name="answer" 
+                       formControlName="answer"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="questionReg.controls['answer'].touched && !questionReg.controls['answer'].valid">
+                        
+                        <span *ngIf="questionReg.controls['answer'].hasError('required')">
+                            answer  is required !
+                        </span>
+                       
+                       </span>
+                     </div>
+    
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                       
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="btn btn-success">Add</button>
+                    
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                    </div>  
+                </form>
+            
+
+        </div>
+
+    </div>
+
+    
+
+ </div>

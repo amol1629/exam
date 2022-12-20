@@ -1,0 +1,167 @@
+<h1 class="text-center">add-student </h1>
+ <div class="container">
+    <div class="bootstrap-wrapper">
+        <div class="row" >
+            <div class="col-md-6 offset-3">
+                <form [formGroup]="studentReg" (ngSubmit)="register()">
+                    <div class="form-group">
+                        <label for="studentName">Student Name</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="studentName"
+                       name="studentName" 
+                       formControlName="studentName"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="studentReg.controls['studentName'].touched && !studentReg.controls['studentName'].valid">
+                        
+                        <span *ngIf="studentReg.controls['studentName'].hasError('required')">
+                            student name is required !
+                        </span>
+                        <span *ngIf="studentReg.controls['studentName'].hasError('minlength')">
+                            student name Should be minimum 4 characters !
+                        </span>
+                        <span *ngIf="studentReg.controls['studentName'].hasError('maxlength')">
+                            student name Should be maximum 10 characters !
+                        </span>
+                       
+                       </span>
+                     </div>
+                     <div class="form-group">
+                        <label for="studentQualification">Qualification</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="studentQualification"
+                       name="studentQualification" 
+                       formControlName="studentQualification"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="studentReg.controls['studentQualification'].touched && !studentReg.controls['studentQualification'].valid">
+                        
+                        <span *ngIf="studentReg.controls['studentQualification'].hasError('required')">
+                            Qualification is required !
+                        </span>
+                        <span *ngIf="studentReg.controls['studentQualification'].hasError('minlength')">
+                            Qualification Should be minimum 2 characters !
+                        </span>
+                        <span *ngIf="studentReg.controls['studentQualification'].hasError('maxlength')">
+                            Qualification Should be maximum 10 characters !
+                        </span>
+                       
+                       </span>
+                     
+                     </div>
+                     <div class="form-group">
+                        <label for="studentAge">Student Age</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="studentAge"
+                       name="studentAge" 
+                       formControlName="studentAge"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="studentReg.controls['studentAge'].touched && !studentReg.controls['studentAge'].valid">
+                        
+                        <span *ngIf="studentReg.controls['studentAge'].hasError('required')">
+                            student Age is required !
+                        </span>
+                        <span *ngIf="studentReg.controls['studentAge'].hasError('min')">
+                            student Age Should be minimum 10 years !
+                        </span>
+                       
+                       </span>
+
+                     </div>
+                     <div class="form-group">
+                        <label for="studentEmail">Student Email</label>
+                      <input type="email"
+                       class="form-control" 
+                       id="studentEmail"
+                       name="studentEmail" 
+                       formControlName="studentEmail"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="studentReg.controls['studentEmail'].touched && !studentReg.controls['studentEmail'].valid">
+                        
+                        <span *ngIf="studentReg.controls['studentEmail'].hasError('required')">
+                            student Email is required !
+                        </span>
+                        <span *ngIf="studentReg.controls['studentEmail'].hasError('min')">
+                            please enter valid email Id !
+                        </span>
+                       </span> 
+                     </div>
+                     
+                     <div class="form-group">
+                        <label for="studentPassword">Student Password</label>
+                      <input type="password"
+                       class="form-control" 
+                       id="studentPassword"
+                       name="studentPassword" 
+                       formControlName="studentPassword"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="studentReg.controls['studentPassword'].touched && !studentReg.controls['studentPassword'].valid">
+                        
+                        <span *ngIf="studentReg.controls['studentPassword'].hasError('required')">
+                            student Password is required !
+                        </span>
+                        <span *ngIf="studentReg.controls['studentPassword'].hasError('minlength')">
+                              Password Should be min 5 characters!
+                        </span>
+                        <span *ngIf="studentReg.controls['studentPassword'].hasError('maxlength')">
+                          Password Should be max 10 characters!
+                    </span>
+                
+                       </span>
+
+                     </div>
+                     <div class="form-group">
+                        <label for="studentMobileNumber">MobileNumber</label>
+                      <input type="text"
+                       class="form-control" 
+                       id="studentMobileNumber"
+                       name="studentMobileNumber" 
+                       formControlName="studentMobileNumber"
+                       aria-describedby="emailHelp">
+                       <span *ngIf="studentReg.controls['studentMobileNumber'].touched && !studentReg.controls['studentMobileNumber'].valid">
+                        
+                        <span *ngIf="studentReg.controls['studentMobileNumber'].hasError('required')">
+                            MobileNumber is required !
+                        </span>
+                        <span *ngIf="studentReg.controls['studentMobileNumber'].hasError('minlength')">
+                            MobileNumber Should be minimum 10 number !
+                        </span>
+                        <span *ngIf="studentReg.controls['studentMobileNumber'].hasError('maxlength')">
+                            MobileNumber Should be maximum 10 number !
+                        </span>
+                       </span>
+                
+                    </div>
+                                
+                     <div>
+                      <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Course</label>
+                     <label for="course" class="form-label">Course</label><br>
+                     <select class="custom-select" 
+                      id="course"
+                      name="course" 
+                      formControlName="course">
+                     <option   *ngFor="let data of courseList" [ngValue]="data">{{data.courseName}}</option>
+                    </select>
+                     </div>
+                     
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                       
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="btn btn-success">Add</button>
+                    
+                    <button type="submit" class="btn btn-primary">Reset</button>
+                    </div>  
+                 
+                 
+            </form>
+        </div>
+
+    </div>
+
+    </div>
+
+ </div>
